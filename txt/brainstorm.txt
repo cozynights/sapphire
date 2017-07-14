@@ -1,0 +1,10 @@
+browse popular by genre?
+browse by # views descending in type:music?
+
+when you open up site from a room link, apply that room theme, but you can override by choosing any other theme
+maybe select themes from a dropdown then arranged like windows taskbar dropup?
+| icon   icon   icon |
+|                    |
+| icon   icon        |
+
+fade out background image into new one      

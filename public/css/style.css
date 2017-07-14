@@ -1,0 +1,237 @@
+* {
+    font-family: Ubuntu, sans-serif;
+}
+
+.text-center {
+    text-align: center;
+}
+
+body {
+    margin: 0;
+}
+
+.page-container {
+    width: auto;
+    height: auto;
+    content: '';
+    display: block;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    right: 0;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+
+#page-background {
+    /* background: url("../img/backgroundtwo.jpg") no-repeat; */
+    background-size: cover;
+    position: absolute;
+    text-align: center;
+    font-size: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+#header {
+    height: 56px;
+    background-color: rgba(43,43,43, 0.7);
+    width: 100%;
+    z-index: 2;
+    /*background: url("../img/header.png") 0 0 no-repeat;*/
+    /*background-size: 2880px 62px;*/
+    content: '';
+    display: block;
+}
+
+#header > #header-container {
+    width: 90%;
+    height: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+#header > #header-container > #header-content {
+    padding-bottom: 20px;
+    padding-top: 6px;
+    height: 100%;
+}
+
+#header > #header-container > #header-content > .text-center {
+    text-align: center;
+    
+    margin-left: 30px;
+    margin-right: auto;
+}
+
+#header > #header-container > #header-content > * {
+    display: inline-block;
+}
+
+#header > #header-container > #header-content > #home {
+    margin-right: 20px;
+}
+
+#header > #header-container > #header-content > a > svg {
+    margin-bottom: 7px;
+}
+
+#header > #header-container > #header-content > #home:hover {
+    filter: brightness(115%);
+}
+
+#header > #header-container > #header-content > a > svg {
+    height: 24px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+#header > #header-container > #header-content > a:hover > #facebook > path {
+    fill: #44619d !important;
+}
+
+#header > #header-container > #header-content > a:hover > #twitter > path {
+    fill: #76A9EA !important;
+}
+
+#header > #header-container > #header-content > a:hover > #youtube > path {
+    fill: #E02F2F !important;
+}
+
+#header > #header-container > #header-content > a:hover > #youtube > polygon {
+    fill: #FFFFFF !important;
+}
+
+#header > #header-container > #header-content > a > #youtube {
+    padding-left: 0 !important; /* hackfraud way of getting rid of extra space on the svg */
+}
+
+#header > #header-container > #header-content > #wiki {
+    position: relative;
+    top: -6px;
+}
+
+#header > #header-container > #header-content > #wiki:hover {
+    color: white !important;
+}
+
+#header > #header-container > #header-content > a:hover > svg > path,
+#header > #header-container > #header-content > a:hover > svg > polygon,
+#header > #header-container > #header-content > a:hover {
+    transition: 200ms;
+    transition-timing-function: ease-in-out;
+    -webkit-transition: 200ms;
+    -webkit-transition-timing-function: ease-in-out;
+}
+
+#header > #header-container > #header-content > #wiki,
+#header > #header-container > #header-content > #wiki:visited,
+#header > #header-container > #header-content > #wiki:active {
+    text-decoration: none;
+    color: #31bedf;
+}
+
+a,
+a:visited {
+    text-decoration: none !important;
+    color: #f37d03;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    vertical-align: middle;
+}
+
+#header > #header-container > #header-content > #now-playing,
+#header > #header-container > #header-content > * { 
+    color: white;
+    vertical-align: middle;
+}
+
+#header > #header-container > #header-content > a:not(.logo) {
+    margin-top: 12px;
+}
+
+#header > #header-container > #header-content > #theme {
+    float: right;
+}
+
+#header > #header-container > #header-content > #theme > a > img {
+    filter: grayscale(1.0);
+}
+
+#header > #header-container > #header-content > #theme > a:hover > img {
+    filter: none;
+    transition: 200ms;
+    transition-timing-function: ease-in-out;
+    -webkit-transition: 200ms;
+    -webkit-transition-timing-function: ease-in-out;
+}
+
+.sponsor:hover {
+    filter: none;
+}
+
+/* end header */
+/* start navbar */
+
+#navbar {
+    margin-right: auto;
+    margin-left: auto;
+    padding-top: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    width: 1113px;
+}
+
+#navbar > #navbar-container > a:hover {
+    filter: brightness(115%);
+    transition: .2s ease-in-out;
+}
+
+#navbar > #navbar-container > a > #logo {
+    height: fit-content;
+    width: fit-content;
+}
+
+
+/* start main page */
+
+.default-width {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+    height: 100%;
+    max-width: 1400px;
+    border-radius: 5px;
+}
+
+#content > #content-container {
+    padding: 10px;
+    background-color: rgba(20,20,20,  0.8);
+    color: white;
+}
+
+#content > #content-container > #shoutbox {
+    margin: 15px;
+    padding: 10px;
+    height: 500px;
+}
+
+#content > #content-container > #shoutbox > iframe {
+    display: block;
+    margin: 0 auto;
+}
+
+#content > #content-container > #shoutbox > #queue-container{ 
+    margin: 0 auto;
+    align-content: center;
+    text-align: center;
+}
+
+/* end main page */
+/* start footer */

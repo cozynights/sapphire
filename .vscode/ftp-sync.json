@@ -1,0 +1,26 @@
+{
+    "remotePath": "cozy-nights.com",
+    "host": "ps585558.dreamhostps.com",
+    "username": "dh_8rnbw2",
+    "password": "RM2Jqmsk",
+    "port": 22,
+    "secure": false,
+    "protocol": "sftp",
+    "uploadOnSave": false,
+    "passive": false,
+    "debug": false,
+    "privateKeyPath": null,
+    "passphrase": null,
+    "ignore": [
+        "\\.vscode",
+        "\\.git",
+        "\\.DS_Store",
+        "\\.txt",
+        "\\node_modules/*"
+    ],
+    "generatedFiles": {
+        "uploadOnSave": false,
+        "extensionsToInclude": [],
+        "path": ""
+    }
+}

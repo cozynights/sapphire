@@ -1,0 +1,3 @@
+c.emit              Goes to the client
+c.broadcast.emit    Goes to all clients except for the one who sent the message
+socket.emit         Goes to all clients

@@ -1,0 +1,9 @@
+source ~/.nvm/nvm.sh
+nvm use 6.7
+cd cozy-nights.com
+node -v (verify 6.7)
+node server.js
+
+should be listening on port 8000 because that's where I have the site proxied to
+
+have to be within the cozy-nights.com dir in order to run server

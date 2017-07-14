@@ -1,0 +1,27 @@
+Player states:
+
+-1 : Unstarted
+0  : Ended
+1  : Playing
+2  : Paused
+3  : Buffering
+4  : ---------
+5  : Video cued 
+
+
+Playback levels:
+
+small   : Player height is 240px, and player dimensions are at least 320px by 240px for 4:3 aspect ratio.
+medium  : Player height is 360px, and player dimensions are 640px by 360px (for 16:9 aspect ratio) or 480px by 360px (for 4:3 aspect ratio).
+large   : Player height is 480px, and player dimensions are 853px by 480px (for 16:9 aspect ratio) or 640px by 480px (for 4:3 aspect ratio).
+hd720   : Player height is 720px, and player dimensions are 1280px by 720px (for 16:9 aspect ratio) or 960px by 720px (for 4:3 aspect ratio).
+hd1080  : Player height is 1080px, and player dimensions are 1920px by 1080px (for 16:9 aspect ratio) or 1440px by 1080px (for 4:3 aspect ratio).
+highres : Player height is greater than 1080px, which means that the player's aspect ratio is greater than 1920px by 1080px.
+default : YouTube selects the appropriate playback quality. 
+          This setting effectively reverts the quality level to the default state and nullifies any previous efforts to set playback quality using the cueVideoById, loadVideoById or setPlaybackQuality functions.
+
+
+
+cancel hosting
+
+https://help.dreamhost.com/hc/en-us/articles/215202377
