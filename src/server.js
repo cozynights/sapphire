@@ -18,7 +18,7 @@ let current_video = {
 
 function video_change(url) {
 	// @todo: Get video info from YouTube
-	
+
 	// http.get("http://www.youtube.com/oembed?url=${data.link}&format=json",
 	// 	response => {
 	// 		let data = [];
@@ -77,6 +77,29 @@ function video_seek(time) {
 
 let users = [];
 
+function add_user(id) {
+	let user = {
+		id:   client.id,
+		name: "${client.id}"
+	};
+
+	socket.emit("add-user", { user: user });
+	users.push(user);
+}
+
+function remove_user(id) {
+	let user = find_user(client.id);
+	if (!user) {
+		console.error("Failed to remove user, a user with id '${client.id}' was not found");
+		return;
+	}
+
+	let index = users.indexOf(user);
+	users.splice(index, 1);
+
+	socket.emit("remove-user", { id: user.id });
+}
+
 function find_user(id) {
 	let user = null;
 	for (let u of users) {
@@ -90,8 +113,6 @@ function find_user(id) {
 }
 
 socket.on("connection", client => {
-	console.log("Client connected");
-	
 	client.emit("initialize", {
 		current_video: {
 			url:  current_video.url,
@@ -101,28 +122,8 @@ socket.on("connection", client => {
 		users: users
 	});
 
-	let user = {
-		id: client.id,
-		name: "${client.id}"
-	};
-
-	socket.emit("add-user", { user: user });
-	users.push(user);
-
-	client.on("disconnect", () => {
-		console.log("Client disconnected");
-
-		let user = find_user(client.id);
-		if (!user) {
-			console.error("Failed to remove user on disconnect, a user with id '${client.id}' was not found");
-			return;
-		}
-
-		let index = users.indexOf(user);
-		users.splice(index, 1);
-
-		socket.emit("remove-user", { id: user.id });
-	});
+	add_user(client.id);
+	client.on("disconnect", () => remove_user(client.id));
 
 	client.on("set-name", data => {
 		let user = find_user(client.id);
