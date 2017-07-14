@@ -1,9 +1,10 @@
 {
   "name": "sapphire",
   "version": "1.0.0",
+  "main": "src/server.js",
   "scripts": {
-    "start-dev":  "node_modules/.bin/nodemon",
-    "start-live": "node src/server.js"
+    "dev":  "node_modules/.bin/nodemon",
+    "live": "node src/server.js"
   },
   "dependencies": {
     "express": "^4.15.3",
