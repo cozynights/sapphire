@@ -7,18 +7,15 @@ var socket = io(server);
 var connected_count = 0;
 
 socket.on("connection", function(c) {
-	// what if one person gets an ad, and the other doesn't?
 	connected_count++;
 	console.log("Client connected. Active sockets: " + connected_count);
 
 	c.on("disconnect", function() {
-		// get current video
 		connected_count--;
 		console.log("Client disconnected. Active sockets: " + connected_count);
 	});
 
 	c.on("video-cursor-changed", function(data) {
-		//todo(Matt);
 		c.emit("change-video-position", {  });
 	});
 
@@ -74,7 +71,6 @@ socket.on("connection", function(c) {
 
 app.use(express.static("public/"));
 
-//todo(Matt): Get permissions to do port 80
 server.listen(8000, function() {
 	console.log('listening on *:8000');
 });

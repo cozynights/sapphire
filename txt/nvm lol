@@ -1,8 +1,0 @@
-
-
-first
-source ~/.nvm/nvm.sh
-
-then
-nvm use 6.7
-
